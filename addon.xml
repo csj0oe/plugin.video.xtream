@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.xtream" name="Xtream IPTV" version="1.0.0" provider-name="csj0oe">
+    <requires>
+        <import addon="xbmc.python" version="3.0.1"/>
+        <import addon="script.module.requests" version="2.31.0"/>
+        <import addon="script.module.ijson" version="3.2.2"/>
+        <import addon="script.module.xmltodict" version="0.12.0"/>
+    </requires>
+    <extension point="xbmc.service" library="service.py"/>
+    <extension point="xbmc.python.script" library="script.py">
+        <provides>executable</provides>
+    </extension>
+    <extension point="xbmc.python.pluginsource" library="entry.py">
+        <provides>video</provides>
+        <medialibraryscanpath content="movies">movies/</medialibraryscanpath>
+        <medialibraryscanpath content="tvshows">tvshows/</medialibraryscanpath>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en"></summary>
+    </extension>
+</addon>
